@@ -6,16 +6,72 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <!-- Fonts -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=ADLaM+Display" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Anton" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Plus+Jakarta+Sans" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Archivo+Black" />
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Russo+One" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
     <link rel="shortcut" href="img/jpg/icon.png" />
     <!-- Bootstrap CSS v5.2.1 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous" />
+    <style>
+      .modal {
+        position: fixed;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.7);
+        color: #fff;
+        z-index: 1;
+        overflow: auto;
+        opacity: 0;
+        pointer-events: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: opacity 0.3s ease-in-out;
+      }
+
+      .modal.appear {
+        opacity: 1;
+        pointer-events: all;
+      }
+
+      .modalContent {
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .modalImg {
+        max-width: 80%;
+        max-height: 80vh;
+        border-radius: 10px;
+      }
+
+      .modalTxt {
+        margin-top: 1em;
+        text-align: center;
+      }
+
+      .close {
+        position: absolute;
+        top: 1em;
+        right: 1.5em;
+        font-size: 1.5em;
+        cursor: pointer;
+      }
+
+      /* Animasi */
+      @keyframes zoom {
+        from {
+          transform: scale(0);
+        }
+        to {
+          transform: scale(1);
+        }
+      }
+    </style>
   </head>
 
   <body class="bg-navy">
@@ -266,7 +322,7 @@
                 <span class="close"><i class="fas fa-times"></i></span>
                 <div class="modalContent">
                   <img src="" class="modalImg" />
-                  <span class="modalTxt"></span>
+                  <span class="modalTxt font-jkt"></span>
                 </div>
               </div>
             </div>

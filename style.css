@@ -1,3 +1,9 @@
+@import url("https://fonts.googleapis.com/css?family=Russo+One");
+@import url("https://fonts.googleapis.com/css?family=Archivo+Black");
+@import url("https://fonts.googleapis.com/css?family=Plus+Jakarta+Sans");
+@import url("https://fonts.googleapis.com/css?family=Anton");
+@import url("https://fonts.googleapis.com/css?family=ADLaM+Display");
+
 .font-adlam {
   font-family: "ADLaM Display";
 }
@@ -16,6 +22,81 @@
 
 .bg-navy {
   background-color: #080836;
+}
+
+.images {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1em;
+  margin: 0 1em;
+}
+.images img {
+  width: 100%;
+  cursor: pointer;
+  transition: 0.3s all ease;
+}
+.images img:hover {
+  transform: scale(0.9);
+}
+
+.modal {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #fff;
+  z-index: 1;
+  overflow: auto;
+  opacity: 0;
+  pointer-events: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.modal.appear {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.modalContent {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.modalImg {
+  max-width: 80%;
+  max-height: 80vh;
+  border-radius: 10px;
+}
+
+.modalTxt {
+  margin-top: 1em;
+  text-align: center;
+}
+
+.close {
+  position: absolute;
+  top: 1em;
+  right: 1.5em;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+/* Animasi */
+@keyframes zoom {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
 }
 
 .floating {
@@ -339,73 +420,6 @@
   100% {
     transform: translateY(0);
     opacity: 1;
-  }
-}
-
-@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
-
-.images {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 1em;
-  margin: 0 1em;
-}
-.images img {
-  width: 100%;
-  cursor: pointer;
-  transition: 0.3s all ease;
-}
-.images img:hover {
-  transform: scale(0.9);
-}
-.modal {
-  position: fixed;
-  height: 100%;
-  width: 100%;
-  top: 0;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.7);
-  color: #fff;
-  z-index: 1;
-  overflow: auto;
-  opacity: 0;
-  pointer-events: none;
-}
-.modalContent {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.modalImg {
-  width: 80%;
-  max-width: 700px;
-}
-.modalTxt {
-  margin-top: 1em;
-}
-.close {
-  position: absolute;
-  top: 1em;
-  right: 1.5em;
-  font-size: 1.5em;
-  cursor: pointer;
-}
-.modal.appear {
-  opacity: 1;
-  pointer-events: all;
-}
-.modal.appear .modalImg,
-.modal.appear .modalTxt {
-  animation: zoom 0.3s linear;
-}
-@keyframes zoom {
-  from {
-    transform: scale(0);
-  }
-  to {
-    transform: scale(1);
   }
 }
 
