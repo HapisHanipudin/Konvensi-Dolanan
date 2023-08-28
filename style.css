@@ -344,18 +344,18 @@
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
 
-.gambar {
+.images {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 1em;
   margin: 0 1em;
 }
-.gambar img {
+.images img {
   width: 100%;
   cursor: pointer;
   transition: 0.3s all ease;
 }
-.gambar img:hover {
+.images img:hover {
   transform: scale(0.9);
 }
 .modal {
@@ -407,4 +407,65 @@
   to {
     transform: scale(1);
   }
+}
+
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 9999;
+  background-color: #080836;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.preloader img {
+  position: absolute;
+  width: 50%;
+  top: 35%;
+}
+
+.loader {
+  display: block;
+  --height-of-loader: 5px;
+  --loader-color: #dad73b;
+  width: 230px;
+  height: var(--height-of-loader);
+  border-radius: 30px;
+  background-color: rgba(0, 0, 0, 0.2);
+  position: relative;
+  top: 10%;
+}
+
+.loader::before {
+  content: "";
+  position: absolute;
+  background: var(--loader-color);
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  border-radius: 30px;
+  animation: moving 1s ease-in-out infinite;
+}
+
+@keyframes moving {
+  50% {
+    width: 100%;
+  }
+
+  100% {
+    width: 0;
+    right: 0;
+    left: unset;
+  }
+}
+
+.loaded .preloader {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s, visibility 0.5s;
 }

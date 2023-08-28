@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Title</title>
+    <title>Konvensi Dolanan</title>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
@@ -13,11 +13,16 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Russo+One" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
     <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut" href="img/jpg/icon.png" />
     <!-- Bootstrap CSS v5.2.1 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous" />
   </head>
 
   <body class="bg-navy">
+    <div class="preloader">
+      <img src="img/jpg/icon.png" alt="" />
+      <div class="loader"></div>
+    </div>
     <header>
       <nav class="navbar navbar-dark navbar-expand-lg bg-dark font-adlam shadow-sm">
         <div class="container-fluid">
@@ -245,21 +250,23 @@
               <h1 class="font-anton text-light text-center">Rundown</h1>
             </div>
           </div>
-        </div>
-        <div class="container">
-          <div class="gambar">
-            <img src="img/rundown/Day1-Dragon.webp" alt="Day One Dragon Stage" />
-            <img src="img/rundown/Day1-Phoenix.webp" alt="Day One Phoenix Stage" />
-            <img src="img/rundown/Day2-Dragon.webp" alt="Day Two Dragon Stage" />
-            <img src="img/rundown/Day2-Phoenix.webp" alt="Day Two Phoenix Stage" />
-            <img src="img/rundown/Day3-Dragon.webp" alt="Day Three Dragon Stage" />
-            <img src="img/rundown/Day3-Phoenix.webp" alt="Day Three Phoenix Stage" />
-          </div>
-          <div class="modal">
-            <span class="close"><i class="fas fa-times"></i></span>
-            <div class="modalContent">
-              <img src="" class="modalImg" />
-              <span class="modalTxt"></span>
+          <div class="row">
+            <div class="col mt-3">
+              <div class="images">
+                <img src="img/rundown/Day1-Dragon.webp" alt="Day One Dragon Stage" />
+                <img src="img/rundown/Day1-Phoenix.webp" alt="Day One Phoenix Stage" />
+                <img src="img/rundown/Day2-Dragon.webp" alt="Day Two Dragon Stage" />
+                <img src="img/rundown/Day2-Phoenix.webp" alt="Day Two Phoenix Stage" />
+                <img src="img/rundown/Day3-Dragon.webp" alt="Day Three Dragon Stage" />
+                <img src="img/rundown/Day3-Phoenix.webp" alt="Day Three Phoenix Stage" />
+              </div>
+              <div class="modal">
+                <span class="close"><i class="fas fa-times"></i></span>
+                <div class="modalContent">
+                  <img src="" class="modalImg" />
+                  <span class="modalTxt"></span>
+                </div>
+              </div>
             </div>
           </div>
         </div>
